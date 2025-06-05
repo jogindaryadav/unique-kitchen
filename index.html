@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="bg-white dark:bg-black text-black">
+        <!-- navbar -->
+        <div class="flex flex-row px-[5vw] justify-between border-b-[1px] items-center px-[6vw]">
+            <div class="">
+             <img src="./public/image/Half-Orange-PNG-File.png" alt="logo"  class="rounded-fully w-[4vw]">
+            </div>
+            <div class="">
+                <ul class="font- flex flex-row gap-[3vw] text-xl ">
+                    <li><a href="#view_menu" class="hover:text-[#e35f0e]">View Menu</a></li>
+                    <li><a href="#reservation" class="hover:text-[#e35f0e]">Reservation</a></li>
+                    <li class="hover:text-[#e35f0e]">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <a href="login.html" class="">Login</a>
+                    </li>
+                    <li><a href="register.html" class="hover:text-[#e35f0e]">Register</a></li>
+                    <button class="rounded-full border-[1px] border-black " id="darkMode">
+                        <img src="./public/image/moon-6689.svg" id="icon-moon" class="px-[5px] py-[6px] h-[2vw] w-[2vw]">
+                        <img src="./public/image/sun.png" id="icon-sun" class="hidden px-[5px] py-[6px] h-[2vw] w-[2vw]">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <!-- hero-section -->
+        <div class="flex flex-row border-b-[1px] px-[7vw] pt-[6vh] pb-[3vh] justify-between">
+            <div class="flex flex-row gap-[10vh]">
+                <img src="./public/image/nandos-restaurant.jpg" alt="" class="h-[25vh] w-[25vw] rounded-[8px]">
+                <div class="flex flex-col gap-[6px]">
+                    <p class="text-2xl font-bold ">Unique kitchen</p>
+                    <p class="text-green-500">We are open . <a href="" class="underline underline-offsets-3 text-black">More info</a></p>
+                    <p>Bhairahawa Rupandehi</p>
+                    <div class="flex flex-row">
+                        <i class="fa fa-star-o fill-black-600" aria-hidden="true"></i>
+                        <i class="fa fa-star-o fill-black-600" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <a href="" class="dark:text-white text-[#e35f0e] underline underline-offsets-3">(2) Reviews</a>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+              <div class="border-[1px] text-xl p-[8px] rounded-[8px]">
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Deliver . in 15 min <a href="" class="underline underline-offsets-3 text-[#e35f0e]">change</a></p>
+              </div>
+            </div>
+        </div>
+        <!-- item list section -->
+        <div class="border-b-[1px] px-[7vw] py-[3vh] text-xl">
+            <ul class="text-[#e35f0e] flex flex-row justify gap-[5vw] font-sans overflow-x-auto">
+                <li class=""><a href="#">All Categories</a></li>
+                <li class=""><a href="#">Appetizer</a></li>
+                <li class=""><a href="#">Specials</a></li>
+                <li class=""><a href="#">Salads</a></li>
+                <li class=""><a href="#">Seafoods</a></li>
+                <li class=""><a href="#">Traditonal</a></li>
+                <li class=""><a href="#">Main Courses</a></li>
+                <li class=""><a href="#">Desserts</a></li>
+                <li class=""><a href="#">Drinks</a></li>
+                <li class=""><a href="#">Rem voluptas</a></li>
+                 <li class=""><a href="#">Salads</a></li>
+            </ul>
+        </div>
+        <!-- menu_bar -->
+        <div class="bg-[#f7f7f5] px-[7vw] w-full pt-[15px] flex flex-row gap-[35px] bg-white dark:bg-black text-white">
+            <!-- left menu bar div -->
+            <div class="flex flex-col w-[65%]">
+                <div class="flex flex-row mb-[25px] border-2 w-full rounded-[10px] gap-[15px] bg-white item items-center text-xl bg-white dark:bg-black text-black">
+                    <i class="fa fa-search pl-[10px] py-[10px] dark:text-white" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search menu items." class="w-full px-[5px] py-[10px]" id="searchInput" oninput="filterProducts()">
+                </div>
+                           
+                <div class="grid grid-cols-2 grid-rows-3 gap-6 bg-white dark:bg-black text-white">
+                    <div class="product-item flex flex-row bg-white col-start- row-start h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white" data-name="Burger">
+                        <div class="">
+                            <img src="./public/image/burger.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Burgers</p>
+                            <p>Burgers are a culinary masterpiece that captivates both the eyes and taste buds.</p>
+                            <i class="fa fa-usd" aria-hidden="true">465</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                    <div class="product-item flex flex-row bg-white col-start-1 row-start-2 h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white" data-name="Briyani">
+                        <div class="">
+                            <img src="./public/image/briyani.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Biryani</p>
+                            <p>Biryani is prepared from basmati rice mixed with several spices and cooked in a special way</p>
+                            <i class="fa fa-usd" aria-hidden="true">150</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                    <div class="product-item flex flex-row bg-white col-start-1 row-start-3 h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white" data-name="Momo">
+                        <div class="">
+                            <img src="./public/image/momo.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Momo</p>
+                            <p>Momo are a type of South Asian dumplings that are hugely popular throughout the region</p>
+                            <i class="fa fa-usd" aria-hidden="true">150</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                    <div class="product-item flex flex-row bg-white  row-start-1 h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white" data-name="Paratha">
+                        <div class="">
+                            <img src="./public/image/pratha.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Paratha</p>
+                            <p>Parathas are one of the most popular unleavened flatbreads</p>
+                            <i class="fa fa-usd" aria-hidden="true">150</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                    <div class="product-item flex flex-row bg-white  row-start-2 h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white">
+                        <div class="">
+                            <img src="./public/image/cake.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Desserts cake</p>
+                            <p>A cake is a type of (usually) sweet dessert which is baked</p>
+                            <i class="fa fa-usd" aria-hidden="true">150</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                    <div class="product-item flex flex-row bg-white row-start-3 h-[30vh] p-[10px] rounded-[8px] border-[1px] bg-white dark:bg-black text-white">
+                        <div class="">
+                            <img src="./public/image/wholecat-fish.jpg" alt="" class="rounded-[10px] h-[10vh] w-[8vw]">
+                            <p class="text-xl text-black font-sans">Whole catfish with rice</p>
+                            <p>A bowl of spicy catfish curry over steamed rice makes for a comforting and hearty meal.</p>
+                            <i class="fa fa-usd" aria-hidden="true">150</i>
+                        </div>
+                        <div class="">
+                            <button class="px-[11px] py-[3.5px] rounded-full bg-[#e35f0e] border border-black text-2xl text-black hover:bg-[#f76f3e]">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="w-[35%] bg-white rounded-[10px] p-[25px] border-[1px] h-[60vh] bg-white dark:bg-black text-white">
+                <p class="text-black dark:text-white text-2xl py-[10px]">Basket</p>
+                <div class="flex flex-row justify-between px-[10px] pb-[15px]">
+                    <div class="">
+                        <button class="border-2 rounded-full text[#919090] px-[12px] py-[3px]">-</button>
+                        <button class="border-2 rounded-full text[#919090] px-[10px] py-[3px]">+</button>
+                    </div>
+                    <p class="text-xl">Biryani</p>
+                    <i class="fa fa-usd" aria-hidden="true">150</i>
+                </div>
+                <div class="border-b-[1px] py-[20px] flex flex-row gap-[10px]">
+                    <input type="text" placeholder="Enter coupon code" id="" class="text-black border-[1px] rounded-[10px] px-[10px] text-lg w-full">
+                    <button class="rounded-[10px] bg-[#505052] py-[12px] px-[20px] text-lg text-white"><i class="fa fa-check" aria-hidden="true"></i></button>
+                </div>
+                <div class="py-[20px]">
+                    <div class="flex flex-col pb-[10px] font-sans">
+                        <div class="flex flex-row p-[5px] text-lg justify-between">
+                            <span class="">Sub Total</span>
+                            <span class=""><i class="fa fa-usd" aria-hidden="true">40</i></span>
+                        </div>
+                        <div class="flex flex-row p-[5px] text-lg justify-between">
+                            <span class="">delivery</span>
+                            <span class="">Free</span>
+                        </div>
+                        <div class="flex flex-row p-[5px] text-xl font-bold justify-between">
+                            <span class="">Order Total</span>
+                            <span class=""><i class="fa fa-usd" aria-hidden="true">40</i></span>
+                        </div>
+                    </div>
+                    <button class="rounded-[15px] border-2 items-center w-full text-2xl font-sans bg-[#e63e10] py-[10px]">Checkout .<i class="fa fa-usd" aria-hidden="true" id="myButton">40</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="tailwind.config.js"></script>
+</html>
